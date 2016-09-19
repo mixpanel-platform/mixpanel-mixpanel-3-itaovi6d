@@ -1,0 +1,146 @@
+[
+  {
+    "$count": 1,
+    "converted": 238,
+    "not converted": 5932,
+    "rate of conversion": "0.04"
+  },
+  {
+    "$count": 2,
+    "converted": 744,
+    "not converted": 8863,
+    "rate of conversion": "0.08"
+  },
+  {
+    "$count": 3,
+    "converted": 1467,
+    "not converted": 4796,
+    "rate of conversion": "0.23"
+  },
+  {
+    "$count": 4,
+    "converted": 2273,
+    "not converted": 4370,
+    "rate of conversion": "0.34"
+  },
+  {
+    "$count": 5,
+    "converted": 2927,
+    "not converted": 2478,
+    "rate of conversion": "0.54"
+  },
+  {
+    "$count": 6,
+    "converted": 3212,
+    "not converted": 1740,
+    "rate of conversion": "0.65"
+  },
+  {
+    "$count": 7,
+    "converted": 3326,
+    "not converted": 906,
+    "rate of conversion": "0.79"
+  },
+  {
+    "$count": 8,
+    "converted": 2970,
+    "not converted": 509,
+    "rate of conversion": "0.85"
+  },
+  {
+    "$count": 9,
+    "converted": 2520,
+    "not converted": 255,
+    "rate of conversion": "0.91"
+  },
+  {
+    "$count": 10,
+    "converted": 2158,
+    "not converted": 100,
+    "rate of conversion": "0.96"
+  },
+  {
+    "$count": 11,
+    "converted": 1608,
+    "not converted": 40,
+    "rate of conversion": "0.98"
+  },
+  {
+    "$count": 12,
+    "converted": 1167,
+    "not converted": 13,
+    "rate of conversion": "0.99"
+  },
+  {
+    "$count": 13,
+    "converted": 868,
+    "not converted": 3,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 14,
+    "converted": 587,
+    "not converted": 2,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 15,
+    "converted": 374,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 16,
+    "converted": 220,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 17,
+    "converted": 124,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 18,
+    "converted": 70,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 19,
+    "converted": 40,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 20,
+    "converted": 11,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 21,
+    "converted": 10,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 22,
+    "converted": 3,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 23,
+    "converted": 1,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  },
+  {
+    "$count": 25,
+    "converted": 1,
+    "not converted": 0,
+    "rate of conversion": "1.00"
+  }
+]

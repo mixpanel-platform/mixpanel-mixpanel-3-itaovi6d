@@ -1,15 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<!-- Basic Needs -->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tim's GDE (with UI)</title>
+    <meta name="description" content="">
+    <meta name="author" content="AK">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.css">
+    <link rel="stylesheet" href="./css/font.css" type="text/css">
+    <link rel="stylesheet" href="./css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="./css/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="./css/site.css" type="text/css">
+    <!-- JS -->
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
-  </head>
-  <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
-    <script>
-      // Run queries and display results here
-    </script>
-  </body>
+    <style type="text/css"></style>
+    <script src="./js/plotly-latest.min.js"></script>
+    <script src="./js/gde.js"></script>
+</head>
+<!-- Content -->
+
+<body>
+    <div id="title">
+        <h1>GDE</h1></div>
+    <div class="container">
+        <!-- Chart -->
+        <div class="row" id="summary">
+            <div class="twelve column">
+                <h4 class="hero-heading">I am a growth discovery engine!</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div id="instructions">Choose a <b>date range</b>; choose your <b>'conversion' event</b> and your <b>'KPI' event:</b></div>
+            <div class="controls">
+                <div class="four columns">
+                    <div id="datePicker"></div>
+                </div>
+                <div class="four columns">
+                    <div id="eventClosedWon"></div>
+                </div>
+                <div class="four columns">
+                    <div id="eventLead"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve column">
+                <div id="chartBar" class="chart"></div>
+                <div id="chartLine" class="chart"></div>
+                <a class="button button-primary" id="makeQuery" href="#">Refresh Data</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve column">
+                <p>The X axis is the number of times doing the chosen KPI; the Y axis is the percentage of users in that who convert.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

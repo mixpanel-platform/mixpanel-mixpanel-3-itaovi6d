@@ -88,7 +88,7 @@ $(document).on('ready', function() {
 
 
     //mixpanel auth
-    MP.api.setCredentials('52cf30d62b827c776fd82e50f93a21c8')
+    //MP.api.setCredentials('52cf30d62b827c776fd82e50f93a21c8')
 
     //mixpanel datepicker
     $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {});

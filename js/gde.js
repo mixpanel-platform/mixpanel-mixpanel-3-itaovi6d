@@ -4,19 +4,15 @@ $(document).on('ready', function() {
     $('a').on('click', function(c) {
         c.preventDefault();
         console.log('button "' + c.toElement.id + '" clicked')
-            //chartOne() //can be replaced with doTheQuery()
     })
 
     console.log('doc loaded!')
     $('#makeQuery').on('click', doTheQuery)
 
+    //mixpanel auth
+    //MP.api.setCredentials('APISECRET')
 
-
-
-
-
-
-    //plotly
+    //VIEWS (via plotly)
     function chartOne(data) {
         var x1 = data.map(function(elem) {
             return elem.$count
@@ -33,7 +29,6 @@ $(document).on('ready', function() {
         var y3 = data.map(function(elem) {
             return elem['rate of conversion'] * 100;
         });
-
 
         var trace1 = {
             x: x1,
@@ -87,13 +82,14 @@ $(document).on('ready', function() {
     }
 
 
-    //mixpanel auth
-    //MP.api.setCredentials('52cf30d62b827c776fd82e50f93a21c8')
+
 
     //mixpanel datepicker
-    $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {});
+    $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
 
-    //mixpanel event controls
+    });
+
+    //decorate mixpanel event controls
     $('#eventClosedWon').MPEventSelect()
     $('#eventLead').MPEventSelect();
 
@@ -110,14 +106,13 @@ $(document).on('ready', function() {
         two_week_retention: "two_week_retention"
     }
 
-
-
     function doTheQuery() {
         // validation
         if ($('#eventLead span').text() === "Select KPI event" || $('#eventClosedWon') === 'Select "conversion" event') {
             alert("you' didn't give me a conversion or KPI event")
             return;
         }
+
         // expand view
         $('#chartBar').css('height', 500)
         $('#chartBar').css('width', '100%')
@@ -127,8 +122,8 @@ $(document).on('ready', function() {
         // setup query
         var jqlParams = {
             SIGNUP_EVENT: $('#eventClosedWon span').text(),
-            EVENT: $('#eventClosedWon span').text(),
-            WITHIN_DAYS: 5,
+            EVENT: $('#eventLead span').text(),
+            WITHIN_DAYS: 7,
             PREDICT: "two_week_retention",
             FROM_DATE: $('#datePicker').MPDatepicker().val().from.toISOString().split('T')[0],
             TO_DATE: $('#datePicker').MPDatepicker().val().to.toISOString().split('T')[0]
@@ -224,9 +219,13 @@ $(document).on('ready', function() {
                     })
             }, jqlParams
         ).done(function(data) {
+            var trimmedData = []
+            for (var i = 0; i < 12; i++) {
+                trimmedData.push(data[i])
+            }
             console.log('query finished!')
             console.log(JSON.stringify(data, null, 2))
-            chartOne(data)
+            chartOne(trimmedData)
 
         })
     };

@@ -73,7 +73,7 @@ $(document).on('ready', function() {
         };
 
         var layout2 = {
-            yaxis: { 'title': "conversion percentage" },
+            yaxis: { 'title': "conversion percentage by cohort" },
 
 
         };
@@ -96,7 +96,7 @@ $(document).on('ready', function() {
     //hack to change default text of event selectors
     function setDefaultText() {
         $('#eventLead span').text('Select KPI event')
-        $('#eventClosedWon span').text('Select "conversion" event')
+        $('#eventClosedWon span').text('Select "user born" event')
 
     }
     setTimeout(setDefaultText, 750);
@@ -108,7 +108,7 @@ $(document).on('ready', function() {
 
     function doTheQuery() {
         // validation
-        if ($('#eventLead span').text() === "Select KPI event" || $('#eventClosedWon') === 'Select "conversion" event') {
+        if ($('#eventLead span').text() === "Select KPI event" || $('#eventClosedWon') === 'Select "user born" event') {
             alert("you' didn't give me a conversion or KPI event")
             return;
         }
